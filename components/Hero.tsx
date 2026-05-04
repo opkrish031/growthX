@@ -122,7 +122,7 @@ export default function Hero() {
             <motion.h1
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
-              transition={{ duration: 1.2, delay: 2.0, ease: [0.87, 0, 0.13, 1] }}
+              transition={{ duration: 1.2, delay: 2.0, ease: [0.87, 0, 0.13, 1] as const }}
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 800,
@@ -140,7 +140,7 @@ export default function Hero() {
             <motion.div
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
-              transition={{ duration: 1.2, delay: 2.15, ease: [0.87, 0, 0.13, 1] }}
+              transition={{ duration: 1.2, delay: 2.15, ease: [0.87, 0, 0.13, 1] as const }}
               className="text-gradient"
               style={{
                 fontFamily: 'var(--font-display)',
@@ -160,7 +160,7 @@ export default function Hero() {
           <motion.p
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
-            transition={{ duration: 1.0, delay: 2.4, ease: [0.87, 0, 0.13, 1] }}
+            transition={{ duration: 1.0, delay: 2.4, ease: [0.87, 0, 0.13, 1] as const }}
             style={{
               color: '#94A3B8',
               fontSize: 'clamp(16px, 2.5vw, 20px)',
