@@ -1,11 +1,11 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const nbColumns = 5;
 
-const columnVariants = {
+const columnVariants: Variants = {
   initial: {
     y: 0,
   },
@@ -14,7 +14,7 @@ const columnVariants = {
     transition: {
       duration: 1.0,
       delay: 0.05 * i + 0.5, // Start after counter reaches 100
-      ease: [0.87, 0, 0.13, 1] as const, // Expo ease
+      ease: [0.87, 0, 0.13, 1], // Expo ease
     },
   }),
 };
