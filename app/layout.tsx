@@ -15,12 +15,108 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "GrowthX Media — Scale Faster. Grow Smarter.",
+  title: "GrowthX Media — India's #1 Social Media & Growth Agency",
   description:
-    "India's results-driven social media & digital marketing agency.",
-  icons: {
-    icon: "/logo.png",
+    "Scale your brand with GrowthX Media. India's results-driven agency specializing in Social Media Management, SEO, Paid Ads, and Web Development. Get your free audit today!",
+  keywords: [
+    "social media agency india",
+    "digital marketing agency india",
+    "growthX media",
+    "social media management pricing",
+    "SEO services india",
+    "paid ads management",
+    "instagram growth agency",
+    "e-commerce web development india",
+  ],
+  authors: [{ name: "Pratyaksh Jangid" }],
+  creator: "Pratyaksh Jangid",
+  publisher: "GrowthX Media",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
+  openGraph: {
+    title: "GrowthX Media — Scale Faster. Grow Smarter.",
+    description: "India's premier results-driven social media & digital marketing agency.",
+    url: "https://growthxmedia.com", // Replace with actual domain if known
+    siteName: "GrowthX Media",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 800,
+        alt: "GrowthX Media Logo",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GrowthX Media — Scale Faster. Grow Smarter.",
+    description: "India's premier results-driven social media & digital marketing agency.",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/logo.png", href: "/logo.png" },
+    ],
+    apple: [
+      { url: "/logo.png", href: "/logo.png" },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "GrowthX Media",
+  "image": "https://growthxmedia.com/logo.png",
+  "url": "https://growthxmedia.com",
+  "telephone": "+91 9950517638",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Main Street",
+    "addressLocality": "Jaipur",
+    "addressRegion": "RJ",
+    "postalCode": "302001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.9124,
+    "longitude": 75.7873
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "21:00"
+  },
+  "sameAs": [
+    "https://instagram.com/growth__xmedia"
+  ],
+  "priceRange": "₹₹",
+  "description": "India's premier results-driven social media & digital marketing agency."
 };
 
 export default function RootLayout({
@@ -30,6 +126,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className="min-h-screen overflow-x-hidden"
         style={{

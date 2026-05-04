@@ -58,7 +58,10 @@ export default function Navbar() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
         >
           {/* Logo */}
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-2 sm:gap-3 min-w-0 bg-transparent border-none cursor-pointer p-0"
+          >
             <Image
               src="/logo.png"
               alt="GrowthX Media Logo"
@@ -80,7 +83,7 @@ export default function Navbar() {
             >
               GrowthX Media
             </span>
-          </div>
+          </button>
 
           {/* Desktop Nav Links */}
           <div

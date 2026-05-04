@@ -118,7 +118,7 @@ export default function Hero() {
 
         {/* Headline */}
         <div style={{ marginBottom: '24px' }}>
-          <motion.div
+          <motion.h1
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -129,10 +129,11 @@ export default function Hero() {
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
               color: '#F8F8FF',
+              margin: 0,
             }}
           >
             We Don&apos;t Just Grow Followers.
-          </motion.div>
+          </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
