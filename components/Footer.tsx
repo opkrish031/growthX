@@ -78,7 +78,7 @@ export default function Footer() {
             >
               Scale Faster. Grow Smarter.
               <br />
-              India&apos;s results-driven social media & digital marketing agency.
+              India&apos;s results-driven social media & digital marketing agency based in Jodhpur, Rajasthan.
               <br />
               ESTD 2026.
             </p>

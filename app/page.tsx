@@ -9,6 +9,7 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
+import Preloader from '@/components/Preloader';
 
 const Divider = () => (
   <div
@@ -23,6 +24,7 @@ const Divider = () => (
 export default function Home() {
   return (
     <>
+      <Preloader />
       <Navbar />
       <Hero />
       <Stats />

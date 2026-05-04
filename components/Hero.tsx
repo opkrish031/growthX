@@ -97,7 +97,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 1.8 }}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -118,61 +118,66 @@ export default function Hero() {
 
         {/* Headline */}
         <div style={{ marginBottom: '24px' }}>
-          <motion.h1
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: 'clamp(40px, 8vw, 88px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-              color: '#F8F8FF',
-              margin: 0,
-            }}
-          >
-            We Don&apos;t Just Grow Followers.
-          </motion.h1>
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="text-gradient"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: 'clamp(40px, 8vw, 88px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
-            }}
-          >
-            We Grow Businesses.
-          </motion.div>
+          <div style={{ overflow: 'hidden' }}>
+            <motion.h1
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.2, delay: 2.0, ease: [0.87, 0, 0.13, 1] }}
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 800,
+                fontSize: 'clamp(40px, 8vw, 88px)',
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: '#F8F8FF',
+                margin: 0,
+              }}
+            >
+              We Don&apos;t Just Grow Followers.
+            </motion.h1>
+          </div>
+          <div style={{ overflow: 'hidden' }}>
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.2, delay: 2.15, ease: [0.87, 0, 0.13, 1] }}
+              className="text-gradient"
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 800,
+                fontSize: 'clamp(40px, 8vw, 88px)',
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+              }}
+            >
+              We Grow Businesses.
+            </motion.div>
+          </div>
         </div>
 
         {/* Sub-headline */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          style={{
-            color: '#94A3B8',
-            fontSize: 'clamp(16px, 2.5vw, 20px)',
-            maxWidth: '620px',
-            margin: '0 auto 40px',
-            lineHeight: 1.6,
-            fontFamily: 'var(--font-body)',
-          }}
-        >
-          GrowthX Media — India&apos;s premier social media agency. Driving real results: more engagement, more leads, more sales.
-        </motion.p>
+        <div style={{ overflow: 'hidden', maxWidth: '620px', margin: '0 auto 40px' }}>
+          <motion.p
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1.0, delay: 2.4, ease: [0.87, 0, 0.13, 1] }}
+            style={{
+              color: '#94A3B8',
+              fontSize: 'clamp(16px, 2.5vw, 20px)',
+              lineHeight: 1.6,
+              fontFamily: 'var(--font-body)',
+              margin: 0,
+            }}
+          >
+            GrowthX Media — India&apos;s premier social media agency based in Jodhpur, Rajasthan. Driving real results: more engagement, more leads, more sales.
+          </motion.p>
+        </div>
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.6, delay: 2.6 }}
           className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center flex-wrap"
           style={{
             marginBottom: '64px',
@@ -227,6 +232,7 @@ export default function Hero() {
         {/* Floating Stats Pills */}
         <div
           className="flex flex-wrap gap-3 justify-center"
+          style={{ marginBottom: '120px' }}
         >
           {floatingPills.map((pill, i) => (
             <motion.div
@@ -234,7 +240,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: [0, -10, 0] }}
               transition={{
-                opacity: { delay: 1.0 + pill.delay, duration: 0.5 },
+                opacity: { delay: 3.0 + pill.delay, duration: 0.5 },
                 y: {
                   delay: pill.delay,
                   duration: 3,
@@ -261,18 +267,18 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.5, duration: 1 }}
         style={{
           position: 'absolute',
-          bottom: '40px',
+          bottom: '30px',
           left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '4px',
-          color: '#475569',
+          gap: '8px',
           zIndex: 2,
           cursor: 'pointer',
         }}
@@ -280,10 +286,45 @@ export default function Hero() {
           document.querySelector('#stats')?.scrollIntoView({ behavior: 'smooth' })
         }
       >
-        <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'var(--font-body)' }}>
-          scroll to explore
+        <span style={{ 
+          fontSize: '9px', 
+          letterSpacing: '0.25em', 
+          textTransform: 'uppercase', 
+          fontFamily: 'var(--font-body)',
+          color: '#64748B',
+          fontWeight: 700
+        }}>
+          Scroll
         </span>
-        <ChevronDown size={20} />
+        
+        <div style={{
+          width: '22px',
+          height: '36px',
+          borderRadius: '12px',
+          border: '1.5px solid rgba(108, 99, 255, 0.25)',
+          display: 'flex',
+          justifyContent: 'center',
+          padding: '4px',
+          backgroundColor: 'rgba(108, 99, 255, 0.02)',
+        }}>
+          <motion.div
+            animate={{ 
+              y: [0, 12, 0],
+              opacity: [1, 0.4, 1]
+            }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: 'easeInOut' 
+            }}
+            style={{
+              width: '3px',
+              height: '6px',
+              borderRadius: '2px',
+              backgroundColor: '#6C63FF',
+            }}
+          />
+        </div>
       </motion.div>
     </section>
   );

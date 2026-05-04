@@ -15,18 +15,20 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "GrowthX Media — India's #1 Social Media & Growth Agency",
+  title: "GrowthX Media — Best Social Media & Digital Marketing Agency in Jodhpur, Rajasthan",
   description:
-    "Scale your brand with GrowthX Media. India's results-driven agency specializing in Social Media Management, SEO, Paid Ads, and Web Development. Get your free audit today!",
+    "GrowthX Media is the best digital marketing agency in Jodhpur, Rajasthan. We specialize in Social Media Management, SEO, Paid Ads, and Web Development for brands in Jodhpur and across India. Scale your business with the top growth agency in Rajasthan.",
   keywords: [
-    "social media agency india",
-    "digital marketing agency india",
-    "growthX media",
-    "social media management pricing",
-    "SEO services india",
-    "paid ads management",
-    "instagram growth agency",
-    "e-commerce web development india",
+    "digital marketing agency in jodhpur",
+    "social media agency jodhpur",
+    "best seo services in rajasthan",
+    "growthX media jodhpur",
+    "social media management jodhpur",
+    "web development company jodhpur",
+    "facebook ads agency rajasthan",
+    "instagram marketing jodhpur",
+    "content creation agency jodhpur",
+    "digital marketing services in rajasthan",
   ],
   authors: [{ name: "Pratyaksh Jangid" }],
   creator: "Pratyaksh Jangid",
@@ -37,8 +39,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "GrowthX Media — Scale Faster. Grow Smarter.",
-    description: "India's premier results-driven social media & digital marketing agency.",
+    title: "GrowthX Media — Best Digital Marketing Agency in Jodhpur, Rajasthan",
+    description: "Scale your brand with the premier results-driven social media & digital marketing agency in Jodhpur.",
     url: "https://growthxmedia.com", // Replace with actual domain if known
     siteName: "GrowthX Media",
     images: [
@@ -54,8 +56,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GrowthX Media — Scale Faster. Grow Smarter.",
-    description: "India's premier results-driven social media & digital marketing agency.",
+    title: "GrowthX Media — Digital Marketing Agency in Jodhpur",
+    description: "India's premier results-driven social media & digital marketing agency based in Rajasthan.",
     images: ["/logo.png"],
   },
   robots: {
@@ -88,16 +90,16 @@ const jsonLd = {
   "telephone": "+91 9950517638",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Main Street",
-    "addressLocality": "Jaipur",
-    "addressRegion": "RJ",
-    "postalCode": "302001",
+    "streetAddress": "Sardarpura",
+    "addressLocality": "Jodhpur",
+    "addressRegion": "Rajasthan",
+    "postalCode": "342001",
     "addressCountry": "IN"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 26.9124,
-    "longitude": 75.7873
+    "latitude": 26.2389,
+    "longitude": 73.0243
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
