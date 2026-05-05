@@ -18,9 +18,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://growthxmedia.com'),
-  title: "GrowthX Media — Best Social Media & Digital Marketing Agency in Jodhpur, Rajasthan",
+  title: "GrowthX Media — India's Premier Results-Driven Digital Marketing Agency",
   description:
-    "GrowthX Media is the best digital marketing agency in Jodhpur, Rajasthan. We specialize in Social Media Management, SEO, Paid Ads, and Web Development for brands in Jodhpur and across India. Scale your business with the top growth agency in Rajasthan.",
+    "GrowthX Media is a top-tier digital marketing agency in India, specializing in Social Media Management, SEO, Paid Ads, and Web Development. Based in Jodhpur, we help brands nationwide scale with data-driven growth strategies.",
   keywords: [
     "digital marketing agency in jodhpur",
     "social media agency jodhpur",

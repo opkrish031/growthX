@@ -169,7 +169,7 @@ export default function Hero() {
               margin: 0,
             }}
           >
-            GrowthX Media — India&apos;s premier social media agency based in Jodhpur, Rajasthan. Driving real results: more engagement, more leads, more sales.
+            GrowthX Media — India&apos;s premier results-driven social media agency. Helping brands across the country scale with engagement that converts.
           </motion.p>
         </div>
 

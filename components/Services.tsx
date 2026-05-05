@@ -245,7 +245,7 @@ export default function Services() {
               fontFamily: 'var(--font-body)',
             }}
           >
-            Every service is engineered to deliver measurable results for brands in Jodhpur and across India.
+            Every service is engineered to deliver measurable results for your brand, across India and beyond.
           </p>
         </motion.div>
 
