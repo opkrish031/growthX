@@ -4,17 +4,21 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useRouter, usePathname } from 'next/navigation';
 
 const navLinks = [
+  { label: 'Home', href: '/' },
   { label: 'Services', href: '#services' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'Process', href: '#process' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -24,8 +28,30 @@ export default function Navbar() {
 
   const handleLinkClick = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+
+    if (href === '/') {
+      if (pathname === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        router.push('/');
+      }
+      return;
+    }
+
+    if (href.startsWith('#')) {
+      if (pathname === '/') {
+        const el = document.querySelector(href);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // If we're on a different page (like /blog), go home then we'd need to scroll
+        // For simplicity in Next.js, we push to the anchor
+        router.push('/' + href);
+      }
+    } else {
+      router.push(href);
+    }
   };
 
   return (
@@ -59,7 +85,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => handleLinkClick('/')}
             className="flex items-center gap-2 sm:gap-3 min-w-0 bg-transparent border-none cursor-pointer p-0"
           >
             <Image

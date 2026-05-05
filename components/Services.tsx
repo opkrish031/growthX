@@ -168,7 +168,10 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[0] }) {
         {service.price}
       </div>
 
-      <div
+      <a
+        href={`https://wa.me/918290016906?text=${encodeURIComponent('Hi GrowthX Media, I am interested in ' + service.title)}`}
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -178,12 +181,13 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[0] }) {
           fontWeight: 500,
           transition: 'gap 0.2s ease',
           cursor: 'pointer',
+          textDecoration: 'none',
         }}
-        onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.gap = '8px'; }}
-        onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.gap = '4px'; }}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.gap = '8px'; }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.gap = '4px'; }}
       >
-        Learn More →
-      </div>
+        Contact Us →
+      </a>
     </motion.div>
   );
 }

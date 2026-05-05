@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Chatbot from "@/components/Chatbot";
 
 const syne = Syne({
   variable: "--font-display",
@@ -15,6 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://growthxmedia.com'),
   title: "GrowthX Media — Best Social Media & Digital Marketing Agency in Jodhpur, Rajasthan",
   description:
     "GrowthX Media is the best digital marketing agency in Jodhpur, Rajasthan. We specialize in Social Media Management, SEO, Paid Ads, and Web Development for brands in Jodhpur and across India. Scale your business with the top growth agency in Rajasthan.",
@@ -127,7 +130,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${syne.variable} ${dmSans.variable} overflow-x-hidden`}>
       <head>
         <script
           type="application/ld+json"
@@ -135,7 +138,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="min-h-screen overflow-x-hidden"
+        className="min-h-screen overflow-x-hidden w-full relative"
         style={{
           backgroundColor: "#080810",
           color: "#F8F8FF",
@@ -169,6 +172,10 @@ export default function RootLayout({
           }}
         />
         <main style={{ position: "relative", zIndex: 1 }}>{children}</main>
+        
+        {/* Floating Icons */}
+        <WhatsAppButton />
+        <Chatbot />
       </body>
     </html>
   );
