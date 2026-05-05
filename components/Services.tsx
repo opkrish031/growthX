@@ -240,13 +240,12 @@ export default function Services() {
             style={{
               color: '#94A3B8',
               fontSize: '18px',
-              maxWidth: '500px',
+              maxWidth: '600px',
               margin: '0 auto',
               fontFamily: 'var(--font-body)',
             }}
           >
-            Every service is engineered to deliver measurable results for your
-            brand.
+            Every service is engineered to deliver measurable results for brands in Jodhpur and across India.
           </p>
         </motion.div>
 
