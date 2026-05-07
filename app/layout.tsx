@@ -3,6 +3,8 @@ import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Chatbot from "@/components/Chatbot";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/next";
 
 const syne = Syne({
   variable: "--font-display",
@@ -181,6 +183,8 @@ export default function RootLayout({
         {/* Floating Icons */}
         <WhatsAppButton />
         <Chatbot />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
